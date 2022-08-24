@@ -1,0 +1,243 @@
+$mainColor1: #b61984;
+$mainColor2: #000;
+$mainColor3: #fff;
+
+$bg-color-1: #dcd1f3;
+$bg-color-2: #fff;
+$f-w-1: 400;
+$f-w-2: 500;
+$f-w-3: 700;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+}
+
+.body {
+    background-attachment: fixed;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.title-content {
+    h6 {
+        color: $mainColor1;
+        font-weight: $f-w-3;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: $f-w-3;
+    }
+}
+
+.header {
+    .navbar-nav {
+        margin-left: 200px;
+
+        .nav-item {
+            margin: 0 5px;
+
+            a {
+                color: $mainColor2;
+                font-size: 16px;
+                font-weight: 500;
+                position: relative;
+
+
+                &:hover {
+                    color: $mainColor1;
+                    cursor: pointer;
+
+                    &::after {
+                        display: block;
+                    }
+                }
+
+                &:after {
+                    content: " ";
+                    display: none;
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    z-index: 1;
+                    background-color: $mainColor1;
+                    border-radius: 50%;
+                    z-index: 5;
+                    bottom: -20px;
+                    margin-left: -4px;
+                    left: 50%;
+                    color: $mainColor1;
+
+                }
+
+            }
+
+            .active {
+                color: $mainColor1;
+            }
+
+            .active::after {
+                content: " ";
+                display: block;
+                position: absolute;
+                height: 10px;
+                width: 10px;
+                z-index: 1;
+                background-color: $mainColor1;
+                border-radius: 50%;
+                z-index: 5;
+                bottom: -20px;
+                margin-left: -4px;
+                left: 50%;
+                color: $mainColor1;
+            }
+
+
+
+        }
+
+        .icon {
+            color: $mainColor2;
+
+            &:hover {
+                cursor: pointer;
+                color: $mainColor1;
+            }
+        }
+
+        .tele {
+            background-color: $mainColor1;
+            border-radius: 18px;
+            padding: 0 15px;
+            margin: 0 20px;
+            border: 1px solid $mainColor1;
+            transition: all 0.5s ease;
+            transform-origin: center;
+
+
+            &:hover {
+                cursor: pointer;
+                background-color: $mainColor3;
+                transform: scale(1);
+
+                a {
+                    color: $mainColor1;
+                }
+            }
+
+            a {
+                color: $mainColor3;
+            }
+
+        }
+    }
+}
+
+.top-wrapper {
+    background-image: url(../images/Violet_top_left_wave.png);
+    background-size: contain;
+    background-position: bottom;
+
+    .row {
+        padding: 0 0 50px 0;
+
+        .left-col {
+            width: 40%;
+            margin: auto 10px auto 5px;
+        }
+
+        .right-col {
+            margin-right: 0;
+            padding: 0 0 0 80px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.midle-wrapper {
+    background-color: $bg-color-1;
+    .row {
+        .left-col {
+            width: 45%;
+
+            img {
+                width: 100%;
+            }
+
+        }
+
+        .right-col {
+            margin: auto 0 !important;
+            width: 55%;
+        }
+    }
+}
+
+.midle-wrapper-content {
+    background-image: url(../images/Wave_White_bottom_right_shape_01.png);
+    background-size: contain;
+    background-position: bottom;
+    .row {
+        padding: 50px 0 50px 0;
+
+        .col {
+
+            flex-basis: 25%;
+
+            .mini-row {
+                line-height: 1.5;
+
+                .left-col {
+                    text-align: center;
+                    width: 25%;
+
+                    a {
+                        color: $mainColor2;
+
+                        i {
+                            font-size: 2.8em;
+                        }
+
+                        &:hover {
+                            color: $mainColor1;
+                        }
+                    }
+                }
+
+                .right-col {
+                    width: 75%;
+
+                    a {
+                        text-decoration: none;
+                        color: $mainColor1;
+
+                        &:hover {
+                            color: $mainColor2;
+                        }
+
+                    }
+
+                    p {
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.bot-wrrapper{
+    background-color:$bg-color-2;
+    height:200px
+}
