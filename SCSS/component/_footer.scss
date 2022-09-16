@@ -1,0 +1,72 @@
+#footer{
+    background-image: url('/images/footer_background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom:200px;
+    color: $primary-color;
+    .row{
+        .col{
+            // @include respond(phone){
+            //     width:50% !important;
+            // }
+            padding-top:150px;
+            .title{
+                p{ 
+                    font-weight: $text-font-weight-6;
+                    font-size: $text-font-6;
+                    overflow-wrap: inherit;
+                }
+
+            }
+            .content{
+                .content-detail{
+                    ul{
+                        li{
+                            
+                            a{
+                                border-bottom: 1px solid rgba(0,0,0,.1);
+                                line-height: 2;
+                                padding: 0.9em 0;
+                                display:inline-block;
+                                font-size:$text-font-2 ;
+                                font-weight: $text-font-weight-2;
+                               
+                              
+                            }
+                            span{
+                                line-height: 2.2;
+                                padding: 5px 0;
+                                font-weight: $text-font-weight-2;
+                                padding: 0 10px 10px 0;
+                                i{
+                                    font-weight: $text-font-weight-4;
+                                }
+                            }
+                        }
+                    }
+                    input,button{
+                        text-align: center;
+                        border: 1px solid rgba(0,0,0,.1);
+                        width: 100%;
+                        border-radius: 50px;
+                        padding: 1em;
+                        margin-bottom:15px;
+                        transition:all .2s ease-in-out
+                    }
+                    button{
+                       background-color:$primary-color;
+                       font-weight: $text-font-weight-6;
+                       &:hover{
+                        background-color:$main-color;
+                        border-color:$primary-color;
+                        color: $primary-color;
+                       }
+
+                    }
+                }
+
+            }
+        }
+    }
+}

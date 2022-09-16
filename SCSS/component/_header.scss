@@ -1,0 +1,58 @@
+#header{
+    background-image: url(../images/yellow_top_wave_01.png);
+    background-position:unset;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0 0 90px 0;
+    .navbar{
+        padding: 0;
+        .navbar-brand{
+            padding: 0;
+            width:80px;
+            img{
+                width: 100%;
+            }
+        }
+        ul{
+            li{
+                a{
+                    @include navlink;
+                }
+                .active{
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content:"";
+                        display: block;
+                        color: $main-color;
+                        height: 8px;
+                        width: 8px;
+                        pointer-events: none;
+                        background-color:$main-color;
+                        border-radius: 50%;
+                        bottom: 0;
+                        left: 50%;
+                        right: 50%;
+                    }
+                }
+            }
+        }
+        .nav-end{
+            .tele{
+                @include button;
+            }
+            a{
+                
+                &:hover{
+                    color: $main-color;
+                }
+                &:hover:after{
+                    display: none !important;
+                }
+        }
+    }
+       .navbar-collapse{
+        justify-content: end;
+       }
+    }
+}
